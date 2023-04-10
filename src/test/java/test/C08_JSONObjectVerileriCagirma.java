@@ -63,10 +63,10 @@ public class C08_JSONObjectVerileriCagirma {
         "firstName":"John",
         "lastName":"doe",
         "address": {
-                "streetAddress":"naist street",
-                "city":"Nara",
-                "postalCode":"630-0192"
-                },
+                    "streetAddress":"naist street",
+                    "city":"Nara",
+                    "postalCode":"630-0192"
+                    },
         "age":26,
         "phoneNumbers":[
                     {
@@ -78,30 +78,43 @@ public class C08_JSONObjectVerileriCagirma {
                     "type":"iPhone"
                     }
                     ]
-        }
+                    }
          */
         System.out.println("Isim : " + kisiBilgisi.get("firstName"));
         System.out.println("Soyisim : " + kisiBilgisi.get("lastName"));
         System.out.println("Yas : " + kisiBilgisi.get("age"));
-        System.out.println("Sokak Adi : " + kisiBilgisi.getJSONObject("address").get("streetAddress"));
-        System.out.println("Sehir : " + kisiBilgisi.getJSONObject("address").get("city"));
-        System.out.println("Posta Kodu : " + kisiBilgisi.getJSONObject("address").get("postalCode"));
+
+        System.out.println("Sokak Adi : " + kisiBilgisi.
+                                            getJSONObject("address").
+                                            get("streetAddress"));
+
+        System.out.println("Sehir : " + kisiBilgisi.
+                                        getJSONObject("address").
+                                        get("city"));
+
+        System.out.println("Posta Kodu : " + kisiBilgisi.
+                                             getJSONObject("address").
+                                             get("postalCode"));
+
         System.out.println("Tel No : " + kisiBilgisi
-                .getJSONArray("phoneNumbers")
-                .getJSONObject(0)
-                .get("number"));
+                                         .getJSONArray("phoneNumbers")
+                                         .getJSONObject(0)
+                                         .get("number"));
+
         System.out.println("Tel Turu : " + kisiBilgisi
-                .getJSONArray("phoneNumbers")
-                .getJSONObject(0)
-                .get("type"));
+                                           .getJSONArray("phoneNumbers")
+                                           .getJSONObject(0)
+                                           .get("type"));
+
         System.out.println("Tel Turu : " + kisiBilgisi
-                .getJSONArray("phoneNumbers")
-                .getJSONObject(1)
-                .get("type"));
+                                          .getJSONArray("phoneNumbers")
+                                           .getJSONObject(1)
+                                           .get("type"));
+
         System.out.println("Tel No : " + kisiBilgisi
-                .getJSONArray("phoneNumbers")
-                .getJSONObject(1)
-                .get("number"));
+                                        .getJSONArray("phoneNumbers")
+                                        .getJSONObject(1)
+                                        .get("number"));
 
 
     }
