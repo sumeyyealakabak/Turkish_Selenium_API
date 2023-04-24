@@ -60,11 +60,13 @@ public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
         requestBody.put("depositpaid" , false);
         requestBody.put("bookingdates" ,bookingdates);
         requestBody.put("additionalneeds" , "wi-fi");
+        System.out.println("requestBody = " + requestBody);
 
         //2- expected data
         JSONObject expectedBody=new JSONObject();
         expectedBody.put("bookingid",24);
         expectedBody.put("booking",requestBody);
+        System.out.println("expectedBody = " + expectedBody);
 
         //3- responce i kaydet
         Response response=given().

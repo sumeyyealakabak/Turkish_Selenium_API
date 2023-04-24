@@ -14,7 +14,7 @@ public class C01_Get_ApiSorgulama {
         ve Server isimli Header’in degerinin Cowboy,
         ve status Line’in HTTP/1.1 200 OK
         ve response suresinin 5 sn’den kisa oldugunu manuel olarak test ediniz.
-*/
+   */
 
     @Test
     public  void get01(){

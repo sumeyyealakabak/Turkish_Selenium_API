@@ -21,15 +21,17 @@ public class C11_Get_ExpectedDataOlusturma {
     "userId":3,
     "id":22,
     "title":"dolor sint quo a velit explicabo quia nam",
-    "body":"eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita ear
-    um mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+    "body":"eos qui et ipsum ipsam suscipit aut
+sed omnis non odio
+expedita earum mollitia molestiae aut atque rem suscipit
+nam impedit esse"
     }
      */
 
         //1-url hazirla
         String url="https://jsonplaceholder.typicode.com/posts/22";
 
-        //2- expected data hazirla
+        //2- expected data hazirla----request body
         JSONObject expectedBody=new JSONObject();  // Json objesi
         expectedBody.put("userId",3);
                 expectedBody.put("id",22);
@@ -37,12 +39,12 @@ public class C11_Get_ExpectedDataOlusturma {
                 expectedBody.put("body","eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse");
 
 
-                //3 response i kaydet
+                //3 response i kaydet --- actual data
         Response response=given().when().get(url);
 
         //4- assertions
-        //************ not- donen responce objesinin icindeki body e ulasmak icin*********************
-        // *************** bunu json path objesine donusturmemiz gerekiyor *********************
+        //************      NOT: donen responce objesinin icindeki body e ulasmak icin         *********************
+        // ***************       bunu json path objesine donusturmemiz gerekiyor        *********************
 
         JsonPath responceJsonPath=response.jsonPath();
         assertEquals(expectedBody.get("userId"),responceJsonPath.get("userId"));

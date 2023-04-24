@@ -54,6 +54,7 @@ public class C09_Post_JsonPathIleBodyTesti {
                 requestBody.put("depositpaid",false);
                 requestBody.put("bookingdates",bookingdates);
                 requestBody.put("additionalneeds","wi-fi");
+        System.out.println("requestBody = " + requestBody);
 
                 //2-Expected data hazirla
 

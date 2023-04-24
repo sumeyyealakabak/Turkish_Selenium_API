@@ -49,8 +49,28 @@ public class C13_Get_SoftAssertIleExpectedDataTesti {
         //4- assertions
         JsonPath responseJsonPath=response.jsonPath();
         SoftAssert softAssert=new SoftAssert();
+
         softAssert.assertEquals(responseJsonPath.get("status"),expectedBody.get("status"));
+
         softAssert.assertEquals(responseJsonPath.get("message"),expectedBody.get("message"));
+
+        softAssert.assertEquals(responseJsonPath.
+                               get("data.id"),expectedBody.getJSONObject("data").
+                                                                       get("id"));
+        softAssert.assertEquals(responseJsonPath.
+                               get("data.employee_name"),expectedBody.getJSONObject("data").
+                                                                       get("employee_name"));
+        softAssert.assertEquals(responseJsonPath.
+                               get("data.employee_salary"),expectedBody.getJSONObject("data").
+                                                                       get("employee_salary"));
+        softAssert.assertEquals(responseJsonPath.
+                               get("data.employee_age"),expectedBody.getJSONObject("data").
+                                                                       get("employee_age"));
+        softAssert.assertEquals(responseJsonPath.
+                               get("data.profile_image"),expectedBody.getJSONObject("data").
+                                                                       get("profile_image"));
+        softAssert.assertAll();
+
 
 
 

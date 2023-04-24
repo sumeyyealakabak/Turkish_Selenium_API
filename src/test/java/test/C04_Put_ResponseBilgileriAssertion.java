@@ -12,7 +12,7 @@ public class C04_Put_ResponseBilgileriAssertion {
 /*
         https://jsonplaceholder.typicode.com/posts/70 url’ine asagidaki
         Json formatindaki body ile bir PUT request gonderdigimizde
-                {
+               {
                 "title":"Ahmet",
                 "body":"Merhaba",
                 "userId":10,
@@ -30,6 +30,7 @@ public class C04_Put_ResponseBilgileriAssertion {
         String url="https://jsonplaceholder.typicode.com/posts/70";
 
         JSONObject reqBody=new JSONObject();
+
         reqBody.put("title","Ahmet");
         reqBody.put("body","Merhaba");
         reqBody.put("userId",10);
@@ -43,7 +44,7 @@ public class C04_Put_ResponseBilgileriAssertion {
                            when().
                               body(reqBody.toString()).
                               put(url);
-        response.prettyPrint();
+       // response.prettyPrint();
 
         //Assertions
         response.

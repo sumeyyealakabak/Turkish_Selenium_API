@@ -27,30 +27,27 @@ public class C08_JSONObjectVerileriCagirma {
             "number": "0123-4567-8910"
         }
     ]
-}
+    }
      */
 
-
         JSONObject cepTel = new JSONObject();
-
         cepTel.put("type", "iPhone");
         cepTel.put("number", "0123-4567-8888");
+
         JSONObject evTel = new JSONObject();
         evTel.put("type", "home");
         evTel.put("number", "0123-4567-8910");
-        JSONArray phoneNumbers = new JSONArray();
 
+        JSONArray phoneNumbers = new JSONArray();
         phoneNumbers.put(0, evTel);
         phoneNumbers.put(1, cepTel);
 
         JSONObject address = new JSONObject();
-
         address.put("streetAddress", "naist street");
         address.put("city", "Nara");
         address.put("postalCode", "630-0192");
 
         JSONObject kisiBilgisi = new JSONObject();
-
         kisiBilgisi.put("firstName", "John");
         kisiBilgisi.put("lastName", "doe");
         kisiBilgisi.put("age", 26);

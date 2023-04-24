@@ -39,7 +39,7 @@ public class C03_JsonObjesiOlusturma {
                   "totalprice":111,
                   "depositpaid":true,
                   "lastname":"Brown"
-                  }
+                 }
          */
         JSONObject innerJsonBookingdates=new JSONObject();
         innerJsonBookingdates.put("checkin","2018-01-01");
