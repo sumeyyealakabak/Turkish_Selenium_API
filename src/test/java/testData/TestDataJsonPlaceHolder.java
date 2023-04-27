@@ -2,8 +2,12 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class TestDataJsonPlaceHolder {
     public int basariliStatusKodu=200;
+    public String contentType = "application/json; charset=utf-8";
+    public String connectionHeaderDegeri = "keep-alive";
 
     public JSONObject expectedBodyOlusturJson(){
         /*
@@ -24,4 +28,27 @@ public class TestDataJsonPlaceHolder {
 
         return expectedBody;
     }
+
+    public HashMap reqBodyOlusturMap(){
+        /*
+        {
+        "title":"Ahmet",
+        "body":"Merhaba",
+        "userId":10,
+        "id":70
+        }
+         */
+
+        HashMap <String,Object> reqBody = new HashMap<>();
+
+        reqBody.put("title","Ahmet");
+        reqBody.put("body","Merhaba");
+        reqBody.put("userId",10.0);
+        reqBody.put("id",70.0);
+
+        return reqBody;
+    }
+
+
 }
+
